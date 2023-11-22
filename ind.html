@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <style>*{
+      margin:0px;
+      padding:0px;
+      box-sizing: border-box;
+    }
+    .header{
+      width:100%;
+      min-height:100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('https://th.bing.com/th/id/OIP.pLqraWRbiAbeQ9jBv7QU5AHaEK?rs=1&pid=ImgDetMain');
+      position:relative;
+      background-size:cover;
+      background-repeat: no-repeat;
+      display:flex;
+      gap:170px;
+    }
+    .nav{
+      display:flex;
+      justify-content: space-around;
+      padding:10px 0px;
+      margin-top:50px;
+    }
+    .nav ul{
+      display: flex;
+    }
+    .nav ul li{
+    list-style: none;
+    }
+    .nav ul li a{
+      padding:10px 18px;
+      border-radius: 5px;
+      font-family: sans-serif;
+      font-size: 18px;
+      text-decoration: none;
+      color:aqua;
+    }
+    .nav ul li a:hover{
+      font-size: 20px;
+      background-color: rgb(215, 160, 20);
+    }
+    .header h1{
+    color:beige;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:50px;
+    padding:30px 20px;
+    display:flex;
+    }
+    .login{
+    display:flex;
+    justify-content: space-around;
+    padding:5px 0px;
+    margin-top:55px;
+    gap:15px;
+    }
+    .login ul{
+    display:flex;
+    }
+    .login ul li{
+    list-style: none;
+    }
+    .login ul li a{
+    padding:10px 18px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color:aqua;
+    }
+    .login ul li a:hover{
+      font-size: 20px;
+      background-color: rgb(186, 139, 23);
+    }
+    .Book{
+    color:black;
+      padding:10px;
+      background-color: rgb(165, 144, 105);
+      width:100px;
+      height:40px;
+      border-radius: 5px;
+    }
+    .Book:hover{
+      background-color:rgb(168, 155, 102);
+      font-size:20px;
+      width:120px;
+      height:50px;
+    }
+    .img{
+      position: absolute;
+      font-family:sans-serif;
+      font-size:30px;
+      color:bisque;
+      margin-bottom: 20px;
+      padding:10px 0px;
+      top:350px;
+      left:450px;
+      text-align: center;
+    }
+    .explore{
+    color:black;
+    border-radius:10px;
+    background-color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size:30px;
+    padding:10px 18px;
+    }
+    .explore:hover{
+      background-color: aquamarine;
+      font-size:35px;
+    }
+    .body{
+      background-image: url('https://th.bing.com/th/id/OIP.0gU-6MivaFIaVvEFb41lJwHaE8?w=278&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+      padding:30px;
+    }
+    .about{
+      display:flex;
+      justify-content: center;
+    }
+    .aboutus{
+      background-color: rgb(130, 208, 130);
+      padding:30px;
+      border:none;
+      width:500px;
+      height:350px;
+      font-size:15px;
+    }
+    .cu{
+    background-color: orange;
+    padding:2px;
+    width:100px;
+    height:30px;
+    }
+    .cu:hover{
+      background-color: rgb(86, 52, 237);
+      width:110px;
+      height:35px;
+    }
+    .welcome{
+      border:none;
+      width:500px;
+      height:350px;
+    }
+    .confer{
+      display:flex;
+      justify-content: center;
+    }
+    .discussions{
+      width:500px;
+      height:300px;
+      border-radius: 10px;
+      border:none;
+    }
+    .confereneces{
+    border:none;
+    background-color: white;
+    font-size:18px;
+    width:500px;
+    height:450px;
+    padding:20px;
+    }
+    .contact{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+    .registration{
+    width:650px;
+    height:315px;
+    background-color: bisque;
+    padding:5px;
+    }
+    .submit{
+      width:80px;
+      height:30px;
+      background-color: blueviolet;
+      font-size: 15px;
+      color:rgb(218, 205, 205);
+    }
+    .submit:hover{
+      background-color: rgb(180, 21, 180);
+      width:90px;
+      height:35px;
+    }
+    .footer{
+      background-color: rgb(49, 43, 43);
+      color:rgb(138, 124, 124);
+      padding:30px;
+    }
+    .c1{
+      display:flex;
+      justify-content: center;
+      color:rgb(138, 124, 124);
+      list-style-type: none;
+      gap:100px;
+    }
+    .c2{
+      display:flex;
+      justify-content: center;
+      color:rgb(138, 124, 124);
+      list-style-type: none;
+      gap:100px;
+    }
+    .social{
+      display:flex;
+      gap:10px;
+    }
+    .Subscribe{
+      width:100px;
+      height:30px;
+      background-color: burlywood;
+      font-size:10px;
+    }
+    .Subscribe:hover{
+    width:110px;
+    height:40px;
+    }
+    .email{
+      height:30px;
+    }</style>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/fae2578d6e.js" crossorigin="anonymous"></script>
+<div class="header">
+    <h1>Explore <br> The <br>World</h1>
+    <div class="nav">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Register</a></li>
+            <li><a href="">Fligts</a></li>
+            <li><a href="">packages</a></li>
+            <li><a href="">Visa</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="login">
+        <ul>
+            <li><a href="">Login</a></li>
+            <input type="Button" name="Book A Room" value="Book" class="Book">
+        </ul>
+    </div>
+</div>
+<div class="img">
+    <h1> Plan Your Trip</h1><br>
+    <input type="button" name="Book Now" value="Book Now" class="explore">
+</div>
+<div class="body"><br><br>
+<div class="about">
+<div class="aboutus">
+    <h1 style="color:white;">About Us</h1><br>
+    The World Travel Guide (WTG) is the flagship digital consumer brand within the Columbus Travel Media portfolio. 
+    A comprehensive guide to the world's best travel destinations, its print heritage stretches back 30 years, with the online portal reaching its 19-year anniversary in 2018.
+     Available in English, German, French and Spanish versions, the WTG provides detailed and accurate travel content designed to inspire global travellers. 
+     <br><br>It covers all aspects, from cities to airports, cruise ports to ski and beach resorts, attractions to events, and it also includes weekly travel news, features and quizzes.
+     Updated every day by a dedicated global editorial team, the portal logs 1 million+ unique users monthly.<br><br>
+    <input type="button" name="Contact Us" value="Contact Us" class="cu">
+</div>
+<img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-1663419,resizemode-75,msid-74411560/magazines/panache/how-a-vishwa-namaste-abhiyan-can-help-us-beat-the-coronavirus/those-who-count-handshakes-high-fives-and-kissing-on-cheeks-rubbing-noses-and-bear-hugs-as-their-usual-way-of-greeting-family-friends-or-interlocutors-may-find-it-hard-to-confine-themselves-to-a-mere-hello-or-hi-.jpg" alt="staff" class="welcome">
+</div><br><br>
+<div class="confer">
+    <img src="https://static.javatpoint.com/blog/images/advantages-and-disadvantages-of-group-discussion.png" alt="discuusions" class="discussion">
+    <div class="confereneces">
+        <h1>Conferences</h1><br>
+        UN World Tourism Organization's definition for group meetings and conference travel: A gathering of 10 or more participants for a minimum of four hours in a contracted venue, more than 50 miles away from home.
+        <br><br>A tourism or travel website serves as an information hub for prospective travelers planning a getaway. Today, people travel for a range of experiences—babymoons, staycations, voluntourism or bleisure—you name it.
+         So, provide as much relevant information as possible to help users plan their trips.
+    </div>
+</div>
+<br><br>
+<div class="contact">
+    <div class="registration"><br>
+        <h1>Register Here</h1>
+<table rows="5" cols="5" cellspacing="10" ><tr><td>
+    <tr><td><input type="text" name="name" placeholder="Name"></td>
+    <td><input type="text" name="code" placeholder="pin code"></td></tr>
+<tr><td><input type="number" name="number" placeholder="phone number"></td>
+<td><input type="text" name="loc" placeholder="location"></td></tr>
+<tr><td><input type="email" name="email" placeholder="email"></td></tr>
+<tr><td><textarea rows="5" cols="20" placeholder="address"></textarea></td></tr>
+<tr><td><input type="submit" name="submit" class="submit"></td></tr>
+</td></tr>
+</table>
+</div>
+<img src="https://th.bing.com/th/id/OIP.6v8i-FE824r6N2-hNvdUWwHaIJ?w=163&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="contact" class="contact">
+</div>
+</div>
+<div class="footer"><br>
+    <h1 style="margin-left:70px;">Contact</h1>
+<div class="c1">
+    <ul class="f1">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Conferences</li>
+        <li>Contact Us</li>
+    </ul>
+    <ul class="f2">
+        <li>Promotions</li>
+        <li>Partners</li>
+        <li>Collaborations</li>
+        <li>Careers</li>
+        <li>FAQs</li>
+    </ul>
+</div><br><hr><br>
+<div class="c2">
+    <div class="f3">
+    <h2>Phone support</h2><br>
+    +01 234 567 890
+    </div>
+    <div class="f4">
+        <h2>Follow Us</h2>
+        <small>Social Media Channels</small><br>
+        <div class="social">
+        <p><i class="fa-brands fa-facebook"></i></p>
+        <p><i class="fa-brands fa-instagram"></i></p>
+        <p><i class="fa-brands fa-youtube"></i></p>
+        <p><i class="fa-brands fa-twitter"></i></p>
+        </div>
+    </div>
+    <div class="f5">
+        <h2>Our NewProgram</h2>
+        <small>Signup for Special Offers</small><br>
+        <input type="text" name="email" placeholder="email" class="email">
+        <input type="button" name="Subscribe" value="Subscribe" class="Subscribe">
+    </div>
+</div>
+</div>
+</html>

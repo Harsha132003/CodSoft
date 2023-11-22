@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  #calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  input {
+    grid-column: span 4;
+    padding: 10px;
+    font-size: 18px;
+    text-align: right;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  #equals {
+    grid-column: span 2;
+  }
+
+  #clear {
+    grid-column: span 2;
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  </style>
+</head>
+<body>
+  <div id="calculator">
+    <input type="text" id="display" disabled>
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button onclick="setOperation('/')">/</button>
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="setOperation('*')">*</button>
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="setOperation('-')">-</button>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="appendToDisplay('.')">.</button>
+    <button id="equals" onclick="calculateResult()">=</button>
+    <button id="clear" onclick="clearDisplay()">C</button>
+    <button onclick="setOperation('+')">+</button>
+
+    <script>   
+    let display = document.getElementById('display');
+    let currentInput = '';
+    let currentOperation = '';
+    let previousInput = '';
+
+    function appendToDisplay(value) {
+      currentInput += value;
+      display.value = currentInput;
+    }
+
+    function setOperation(operation) {
+      if (currentInput !== '') {
+        currentOperation = operation;
+        previousInput = currentInput;
+        currentInput = '';
+      }
+    }
+
+    function clearDisplay() {
+      display.value = '';
+      currentInput = '';
+      currentOperation = '';
+      previousInput = '';
+    }
+
+    function calculateResult() {
+      if (currentInput !== '' && previousInput !== '') {
+        switch (currentOperation) {
+          case '+':
+            currentInput = (parseFloat(previousInput) + parseFloat(currentInput)).toString();
+            break;
+          case '-':
+            currentInput = (parseFloat(previousInput) - parseFloat(currentInput)).toString();
+            break;
+          case '*':
+            currentInput = (parseFloat(previousInput) * parseFloat(currentInput)).toString();
+            break;
+          case '/':
+            if (parseFloat(currentInput) !== 0) {
+              currentInput = (parseFloat(previousInput) / parseFloat(currentInput)).toString();
+            } else {
+              currentInput = 'Error';
+            }
+            break;
+        }
+        display.value = currentInput;
+        currentOperation = '';
+        previousInput = '';
+      }
+    }
+    </script>
+  </div>
+</body>
+</html>
